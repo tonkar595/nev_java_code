@@ -1,11 +1,11 @@
-package com.example.demo.service;
+package com.example.demo.common.service;
 
 
-import com.example.demo.dto.ProductReq;
-import com.example.demo.dto.ProductRes;
+import com.example.demo.common.dto.ProductReq;
+import com.example.demo.common.dto.ProductRes;
 
-import com.example.demo.entity.ProductEntity;
-import com.example.demo.repository.ProductRepository;
+import com.example.demo.common.entity.ProductEntity;
+import com.example.demo.common.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -76,6 +76,8 @@ public class ProductService {
         productEntity.setStatus(productReq.getStatus());
         productRepository.save(productEntity);
     }
+
+
 
 
 }

@@ -1,28 +1,33 @@
-package com.example.demo.dto;
+package com.example.demo.common.entity;
+
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
-public class ProductRes {
 
+@Entity
+@Table(name = "products",schema = "public")
+
+public class ProductEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "product_code")
     private String productCode;
 
+    @Column(name = "product_name")
     private String productName;
 
+    @Column(name = "price")
     private BigDecimal price;
 
+    @Column(name = "stock")
     private int stock;
 
+    @Column(name = "status")
     private String status;
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
 
     public Long getId() {
         return id;
@@ -38,6 +43,14 @@ public class ProductRes {
 
     public void setProductCode(String productCode) {
         this.productCode = productCode;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public BigDecimal getPrice() {

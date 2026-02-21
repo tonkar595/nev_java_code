@@ -1,9 +1,9 @@
-package com.example.demo.service;
+package com.example.demo.common.service;
 
-import com.example.demo.dto.UserReq;
-import com.example.demo.dto.UserRes;
-import com.example.demo.entity.StudentEntity;
-import com.example.demo.repository.StudentRepository;
+import com.example.demo.common.dto.UserReq;
+import com.example.demo.common.dto.UserRes;
+import com.example.demo.common.entity.StudentEntity;
+import com.example.demo.common.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

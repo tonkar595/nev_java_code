@@ -1,11 +1,9 @@
-package com.example.demo.controller;
+package com.example.demo.common.controller;
 
 
-import com.example.demo.dto.ProductReq;
-import com.example.demo.dto.ProductRes;
-import com.example.demo.dto.UserReq;
-import com.example.demo.dto.UserRes;
-import com.example.demo.service.ProductService;
+import com.example.demo.common.dto.ProductReq;
+import com.example.demo.common.dto.ProductRes;
+import com.example.demo.common.service.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
