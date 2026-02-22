@@ -1,5 +1,7 @@
 package com.example.demo.products.dto;
 
+import java.math.BigDecimal;
+
 public class CategoryReq {
 
     private Long id;
@@ -7,6 +9,7 @@ public class CategoryReq {
     private String name;
 
     private  String description;
+
 
     public Long getId() {
         return id;

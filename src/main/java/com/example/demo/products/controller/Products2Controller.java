@@ -2,12 +2,10 @@ package com.example.demo.products.controller;
 
 
 import com.example.demo.products.dto.Products2Req;
+import com.example.demo.products.dto.SellProductsReq;
 import com.example.demo.products.service.Products2Service;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,5 +29,11 @@ public class Products2Controller {
     public ResponseEntity<List<Products2Req>> showProducts2(){
         List<Products2Req> products2ReqList = products2Service.fineAllProducts2();
         return ResponseEntity.ok(products2ReqList);
+    }
+
+    @PostMapping("/check-stock")
+    public ResponseEntity<Void> checkSellProduct(@RequestBody SellProductsReq sellProductsReq){
+        products2Service.checkSellProducts(sellProductsReq);
+        return ResponseEntity.ok().build();
     }
 }

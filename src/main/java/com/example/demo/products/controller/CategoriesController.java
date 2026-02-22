@@ -6,10 +6,7 @@ import com.example.demo.products.dto.CategoryReq;
 import com.example.demo.products.entity.CategoriesEntity;
 import com.example.demo.products.service.CategoriesService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,7 +19,7 @@ public class CategoriesController {
         this.categoriesService = categoriesService;
     }
 
-    @RequestMapping("/create")
+    @PostMapping("/create")
     public ResponseEntity<Void> createCategory(@RequestBody CategoryReq categoryReq){
         categoriesService.createCategories(categoryReq);
         return ResponseEntity.ok().build();
@@ -33,5 +30,7 @@ public class CategoriesController {
         List<CategoryReq> categoryReqList = categoriesService.fineAllCategories();
         return ResponseEntity.ok(categoryReqList);
     }
+
+
 
 }
